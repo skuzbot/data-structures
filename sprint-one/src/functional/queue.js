@@ -20,7 +20,9 @@ var Queue = function() {
       return undefined;
     } else {
       storage.smallestKey++;
-      return storage[storage.smallestKey - 1];
+      var temp = storage[storage.smallestKey - 1];
+      delete storage[storage.smallestKey - 1];
+      return temp;
     }
   };
 
