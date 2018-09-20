@@ -18,19 +18,22 @@ var Queue = function() {
 
 var queueMethods = {};
 
-queueMethods.enqueue = function(value){
-  largestKey++;
-  this.storage[largestKey] = value;
+queueMethods.enqueue = function(value) {
+  this.storage.largestKey++;
+  this.storage[this.storage.largestKey] = value;
 };
 
-queueMethods.dequeue = function(){
-  //Missing item here!
-  var temp = this.storage[smallestKey];
-  delete this.storage[smallestKey];
-  smallestKey++;
-  return temp;
+queueMethods.dequeue = function() {
+  if (this.storage.largestKey < this.storage.smallestKey) {
+    return undefined;
+  } else {
+    var temp = this.storage[this.storage.smallestKey];
+    delete this.storage[this.storage.smallestKey];
+    this.storage.smallestKey++;
+    return temp;
+  }
 };
 
-queueMethods.size = function(){
+queueMethods.size = function() {
   return this.storage.largestKey - this.storage.smallestKey + 1;
 };
