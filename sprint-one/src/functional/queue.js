@@ -1,13 +1,14 @@
 var Queue = function () {
   var someInstance = {};
 
-  // Use an object with numeric keys to store values
-  var storage = {};
+   var storage = {};
 
   var lowestKey = 0;
   var highestKey = -1;
 
   // Implement the methods below
+
+ 
 
   someInstance.enqueue = function (value) {
     highestKey++;
@@ -32,3 +33,4 @@ var Queue = function () {
 
   return someInstance;
 };
+
