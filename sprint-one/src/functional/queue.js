@@ -1,7 +1,7 @@
 var Queue = function () {
   var someInstance = {};
 
-   var storage = {};
+  var storage = {};
 
   var lowestKey = 0;
   var highestKey = -1;
