@@ -8,7 +8,7 @@ var BinarySearchTree = function (value) {
 
 var bSTMethods = {};
 
-bSTMethods.insert = function(value) {
+bSTMethods.insert = function (value) {
   if (value === this.value) {
     return;
   }
@@ -27,7 +27,7 @@ bSTMethods.insert = function(value) {
   }
 };
 
-bSTMethods.contains = function(value) {
+bSTMethods.contains = function (value) {
   var currentNode = this;
   if (currentNode.value === value) {
     return true;
@@ -38,7 +38,7 @@ bSTMethods.contains = function(value) {
   }
 };
 
-bSTMethods.depthFirstLog = function(cb) {
+bSTMethods.depthFirstLog = function (cb) {
   var currentNode = this;
   cb(this.value);
   if (this.left !== undefined) {

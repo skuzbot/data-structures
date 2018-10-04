@@ -4,6 +4,7 @@ var Tree = function(value) {
 
   newTree.addChild = treeMethods.addChild;
   newTree.contains = treeMethods.contains;
+  
 
   newTree.children = [];
 
